@@ -11,7 +11,6 @@ public class DestroyOutOfBound : MonoBehaviour
         float topBound = topBoundTransform.position.z;
         float lowerBound = lowerBoundTransform.position.z;
         
-        //GameObject[] objects = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (string tag in tagsToDestroy)
         {
             GameObject[] objects = GameObject.FindGameObjectsWithTag(tag);
