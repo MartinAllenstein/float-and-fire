@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameState : MonoBehaviour
 {
@@ -11,8 +12,8 @@ public class GameState : MonoBehaviour
             hitCount++;
             if (hitCount >= 5)
             {
-                Debug.Log("Game Over!");
                 Time.timeScale = 0;
+                SceneManager.LoadScene("GameOverScene");
             }
         }
     }
