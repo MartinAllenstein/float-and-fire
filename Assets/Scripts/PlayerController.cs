@@ -24,14 +24,7 @@ public class PlayerController : MonoBehaviour
         horizontalInput = moveAction.ReadValue<Vector2>().x;
 
         transform.Translate(horizontalInput * speed * Time.deltaTime * Vector3.right);
-
-        // [5] keep the player inbounds
-        // if (transform.position.x < -10)
-        // {
-        //     transform.position = new Vector3(-10, transform.position.y, transform.position.z);
-        // }
-
-        // [7] keep the player inbounds using xRange variable
+        
         if (transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
@@ -44,6 +37,7 @@ public class PlayerController : MonoBehaviour
         if (shootAction.triggered)
         {
             Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlayShoot();
         }
     }
 }

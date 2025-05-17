@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54335fa33e760af46a474df5130b2b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 150
 --- !u!114 &987791953465475449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +77,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topBoundTransform: {fileID: 0}
   lowerBoundTransform: {fileID: 0}
+  tagsToDestroy:
+  - Enemy
+  - Bullet
 --- !u!54 &3564255744822401939
 Rigidbody:
   m_ObjectHideFlags: 0
